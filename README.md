@@ -3,8 +3,11 @@
 Tech stack
 
 1.React
+
 2.ContextApi
+
 3.React-Router
+
 4.GoogleSearchapi 
 
 # How to build this project
