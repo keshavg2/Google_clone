@@ -4,7 +4,28 @@ import './Home.css';
 import AppsIcon from '@material-ui/icons/Apps';
 import {Avatar} from '@material-ui/core';
 import Search from './Search';
+import { auth, provider } from '../firebase.js';
+import { useStateValue } from '../StateProvider';
+import { actionTypes } from '../reducer';
+
 function Home(){
+
+    const[{user},dispatch]=useStateValue();
+
+    const Signin = ()=>{
+        auth
+        .signInWithPopup(provider)
+        .then((result) => {
+            dispatch({
+                type:actionTypes.SET_USER,
+                user:result.user,
+            })
+        
+            console.log(result);
+        }).catch((error) => {
+            alert(error.message);
+        });
+    }
  return(
      <div className="home">
          <div className="home_header">
@@ -16,7 +37,7 @@ function Home(){
               <Link to="/gmail">Gmail</Link>
               <Link to="/images">Images</Link>
               <AppsIcon/>
-              <Avatar/>
+              <Avatar src={user?.photoURL}onClick={Signin}/>
              </div>
              
          </div>
