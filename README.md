@@ -1,6 +1,11 @@
 # Getting Started with Create React App
 
-This project using the technolgy React,ContextApi,React-Router, GoogleSearchapi to make it.
+Tech stack
+
+1.React
+2.ContextApi
+3.React-Router
+4.GoogleSearchapi 
 
 # How to build this project
 
@@ -8,4 +13,4 @@ This project using the technolgy React,ContextApi,React-Router, GoogleSearchapi 
 
 2.```npm start```
 
-This is the link  for this project https://clone-8ad77.web.app
+This is the link  for this project https://google-clone-app123.netlify.app/
